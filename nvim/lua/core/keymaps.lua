@@ -3,9 +3,10 @@ vim.g.mapleader = ' '
 local keymap = vim.keymap
 
 --general keymaps
-keymap.set('n', '<leader>sv', '<C-w>v') -- split window vertically
-keymap.set('n', '<leader>sh', '<C-w>s') -- split window horizontally
-keymap.set('n', '<leader>se', '<C-w>=') -- split windows in equal width
+keymap.set('i', 'jk', '<ESC>')               -- exit insert mode with jk
+keymap.set('n', '<leader>sv', '<C-w>v')      -- split window vertically
+keymap.set('n', '<leader>sh', '<C-w>s')      -- split window horizontally
+keymap.set('n', '<leader>se', '<C-w>=')      -- split windows in equal width
 keymap.set('n', '<leader>sx', '<:close<CR>') -- close current split window
 
 -- telescope keymaps
