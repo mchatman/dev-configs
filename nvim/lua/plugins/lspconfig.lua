@@ -21,7 +21,11 @@ return {
     { 'folke/neodev.nvim' },
   },
   config = function()
-    require('mason').setup()
+    require('mason').setup({
+      ensure_installed = {
+        'debugpy',
+      },
+    })
     require('mason-lspconfig').setup({
       -- Install these LSPs automatically
       ensure_installed = {
@@ -34,6 +38,8 @@ return {
     require('mason-tool-installer').setup({
       -- Install these linters, formatters, debuggers automatically
       ensure_installed = {
+        'flake8',
+        'mypy',
         'ruff',
       },
     })
