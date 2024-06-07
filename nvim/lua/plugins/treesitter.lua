@@ -11,6 +11,9 @@ return {
     indent = { enable = true },
     ensure_installed = {
       'lua',
+      'javascript',
+      'typescript',
+      'tsx',
     },
   },
   config = function(_, opts)
@@ -18,4 +21,3 @@ return {
     config.setup(opts)
   end,
 }
-

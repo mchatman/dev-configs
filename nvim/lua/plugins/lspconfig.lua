@@ -24,6 +24,10 @@ return {
     require('mason').setup({
       ensure_installed = {
         'debugpy',
+        'eslint-lsp',
+        'prettierd',
+        'typescript-language-server',
+        'tailwindcss-language-server',
       },
     })
     require('mason-lspconfig').setup({
@@ -80,5 +84,11 @@ return {
         },
       },
     })
+
+    lspconfig.tsserver.setup({})
+
+    lspconfig.tailwindcss.setup({})
+
+    lspconfig.eslint.setup({})
   end,
 }
